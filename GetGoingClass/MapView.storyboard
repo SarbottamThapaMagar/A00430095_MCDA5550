@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Txo-cr-DuI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Preview View Controller-->
+        <scene sceneID="lFC-Ka-kIH">
+            <objects>
+                <viewController storyboardIdentifier="MapPreviewViewController" id="Txo-cr-DuI" customClass="MapPreviewViewController" customModule="GetGoingClass" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bhM-Kp-jLE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rhr-nt-924">
+                                <rect key="frame" x="10" y="133" width="355" height="401"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FW-6W-uFE">
+                                <rect key="frame" x="24" y="50" width="30" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="exitButton:" destination="Txo-cr-DuI" eventType="touchUpInside" id="HoZ-Ou-e8e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rhr-nt-924" firstAttribute="centerY" secondItem="bhM-Kp-jLE" secondAttribute="centerY" id="AqV-xT-sIc"/>
+                            <constraint firstItem="5ej-Us-3Vr" firstAttribute="bottom" secondItem="rhr-nt-924" secondAttribute="bottom" constant="89" id="FuB-0a-gvu"/>
+                            <constraint firstItem="rhr-nt-924" firstAttribute="leading" secondItem="5ej-Us-3Vr" secondAttribute="leading" constant="10" id="NdK-2w-rS5"/>
+                            <constraint firstItem="rhr-nt-924" firstAttribute="centerX" secondItem="bhM-Kp-jLE" secondAttribute="centerX" id="SEc-WE-mIk"/>
+                            <constraint firstItem="2FW-6W-uFE" firstAttribute="leading" secondItem="5ej-Us-3Vr" secondAttribute="leading" constant="24" id="k6D-53-upN"/>
+                            <constraint firstItem="2FW-6W-uFE" firstAttribute="top" secondItem="5ej-Us-3Vr" secondAttribute="top" constant="30" id="kZa-My-ocX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5ej-Us-3Vr"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="rhr-nt-924" id="he0-dB-g6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Mj-qu-ef5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="qfb-EJ-q29">
+                    <rect key="frame" x="0.0" y="0.0" width="355" height="401"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </mapView>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="56.221889055472268"/>
+        </scene>
+    </scenes>
+</document>
